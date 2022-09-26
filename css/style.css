@@ -1,0 +1,14 @@
+.show-added-books {
+    display: none;
+    padding: 10px 20px;
+    width: fit-content;
+    padding-bottom: 5px;;
+}
+
+.user-input {
+
+}
+
+.input-value {
+    margin: 0;
+}

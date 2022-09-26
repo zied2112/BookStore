@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Store</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -13,8 +13,11 @@
     <main>
         <div class="container">
             <!-- form -->
-            <form action="js/index.js" class="form" id="form">
+            <form class="form" id="form">
                 <h1>Book Store</h1>
+                <div class="show-added-books">
+
+                </div>
                 <div class="form-control">
                     <label for="title">Title</label>
                     <input type="text" id="title" placeholder="Enter Title">
@@ -23,7 +26,7 @@
                     <label for="author">Author</label>
                     <input type="text" id="author" placeholder="Enter Author">
                 </div>
-                <button type="submit" class="btn">Add</button>
+                <button type="submit" class="btn" id="submit-form">Add</button>
             </form>
 
         </div>
