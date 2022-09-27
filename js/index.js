@@ -3,17 +3,8 @@ const displayContentContainer = document.querySelector('.show-added-books');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 
-
-class AwesomeBook {
-  constructor (title, author) {
-    this.title = title;
-    this.author = author;
-  }
-
-}
-
 class NewAwesomeBook {
-  constructor (id, title, author) {
+  constructor(id, title, author) {
     this.id = id;
     this.title = title;
     this.author = author;
@@ -58,15 +49,12 @@ class NewAwesomeBook {
           </div>
         </div>
       `)
-      .join('')}
+    .join('')}
      `;
   }
-
 }
 
-const bookInput = new NewAwesomeBook;
-
-
+const bookInput = new NewAwesomeBook();
 
 const bookArray = JSON.parse(localStorage.getItem('books')) || [];
 displayContentContainer.innerHTML = `
@@ -84,15 +72,14 @@ displayContentContainer.innerHTML = `
     `)
     .join('')}
   `;
-  
 
-  submit.addEventListener('click', (event) => {
-    event.preventDefault();
-    bookInput.addAwesomeBook();
-  });
+submit.addEventListener('click', (event) => {
+  event.preventDefault();
+  bookInput.addAwesomeBook();
+});
 
-  displayContentContainer.addEventListener('click', (event) => {
-  bookInput.removeAwesomeBook()
-  });
+displayContentContainer.addEventListener('click', (event) => {
+  bookInput.removeAwesomeBook();
+});
 // window.addEventListener('load', () => {
 // });
