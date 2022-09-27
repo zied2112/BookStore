@@ -1,11 +1,11 @@
-.show-added-books {
-    display: none;
-    padding: 10px 20px;
-    width: fit-content;
-    padding-bottom: 5px;;
+.show-added-books  {
+    width: 80%;
+    padding-bottom: 5px;
+    
 }
-
-.user-input {
+.show-added-books > .user-input{
+    padding: 1rem;
+    border-bottom: 2px solid #333;
 
 }
 
