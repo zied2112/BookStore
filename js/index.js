@@ -19,20 +19,20 @@ displayContentContainer.innerHTML = `
 window.addEventListener('load', () => {
   submit.addEventListener('click', (event) => {
     event.preventDefault();
-    if((title.value === '') || (author.value === '')) {
+    if ((title.value === '') || (author.value === '')) {
       alert('Please put a title and author');
     } else {
       bookArray.push({ title: title.value, author: author.value });
       displayContentContainer.innerHTML = `
       ${bookArray
-      .map((book, index) => `
+    .map((book, index) => `
         <div class="user-input">
           <h3 class="input-value">${book.title}</h3>
           <p class="input-value">${book.author}</p>
           <button class="delete-btn" id=${index}>Remove</button>
         </div>
       `)
-      .join('')}
+    .join('')}
     `;
       localStorage.setItem('books', JSON.stringify(bookArray));
     }
