@@ -1,11 +1,11 @@
 .show-added-books {
   width: 80%;
-  padding-bottom: 5px;
+  border: 2px solid black;
 }
 
 .show-added-books > .user-input {
   padding: 1rem;
-  border-bottom: 2px solid #333;
+  border-bottom: 1px solid #333;
 }
 
 .input-value {
@@ -17,4 +17,34 @@
   flex-direction: column;
   gap: 15px;
   align-items: flex-start;
+  margin-top: 60px;
+}
+
+#title {
+  border: 2px solid black;
+
+}
+
+#author {
+  border: 2px solid black;
+}
+
+.user-input {
+  display: flex;
+  gap: 10px;
+}
+
+.input-div {
+  display: flex;
+  gap: 10px;
+  width: 90%;
+}
+
+.detele-btn-div {
+  justify-self: flex-end;
+}
+
+#submit-form {
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
 }

@@ -28,9 +28,13 @@ class NewAwesomeBook {
       ${bookArray
     .map((book, index) => `
         <div class="user-input">
-          <h3 class="input-value">${book.title}</h3>
-          <p class="input-value">${book.author}</p>
+          <div class="input-div">
+          <h3 class="input-value">"${book.title}"</h3>
+          <h3 class="input-value"> by ${book.author}</h3>
+          </div>
+          <div class="detele-btn-div">
           <button class="delete-btn" id=${index}>Remove</button>
+          </div>
         </div>
       `)
     .join('')}
@@ -44,10 +48,14 @@ class NewAwesomeBook {
     localStorage.setItem('books', JSON.stringify(bookArray));
     displayContentContainer.innerHTML = `
       ${bookArray.map((book, index) => `
-        <div class="user-input">
-          <h3 class="input-value">${book.title}</h3>
-          <p class="input-value">${book.author}</p>
+         <div class="user-input">
+          <div class="input-div">
+          <h3 class="input-value">"${book.title}"</h3>
+          <h3 class="input-value"> by ${book.author}</h3>
+          </div>
+          <div class="detele-btn-div">
           <button class="delete-btn" id=${index}>Remove</button>
+          </div>
         </div>
       `)
       .join('')}
@@ -65,13 +73,18 @@ displayContentContainer.innerHTML = `
     ${bookArray
     .map((book, index) => `
       <div class="user-input">
-        <h3 class="input-value">${book.title}</h3>
-        <p class="input-value">${book.author}</p>
+        <div class="input-div">
+        <h3 class="input-value">"${book.title}"</h3>
+        <h3 class="input-value"> by ${book.author}</h3>
+        </div>
+        <div class="detele-btn-div">
         <button class="delete-btn" id=${index}>Remove</button>
+        </div>
       </div>
     `)
     .join('')}
   `;
+  
 
   submit.addEventListener('click', (event) => {
     event.preventDefault();
