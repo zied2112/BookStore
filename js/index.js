@@ -16,8 +16,7 @@ class NewAwesomeBook {
     } else {
       bookArray.push({ title: title.value, author: author.value });
       displayContentContainer.innerHTML = `
-      ${bookArray
-    .map((book, index) => `
+      ${bookArray.map((book, index) => `
         <div class="user-input">
           <div class="input-div">
           <h3 class="input-value">"${book.title}"</h3>
