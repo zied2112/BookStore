@@ -1,6 +1,3 @@
-// console.log("Hello World");
-// Declare the button
-
 const submit = document.querySelector('#submit-form');
 const displayContentContainer = document.querySelector('.show-added-books');
 const title = document.querySelector('#title');
@@ -22,20 +19,23 @@ displayContentContainer.innerHTML = `
 window.addEventListener('load', () => {
   submit.addEventListener('click', (event) => {
     event.preventDefault();
-    // displayContentContainer.style.display = "block";
-    bookArray.push({ title: title.value, author: author.value });
-    displayContentContainer.innerHTML = `
-    ${bookArray
-    .map((book, index) => `
-      <div class="user-input">
-        <h3 class="input-value">${book.title}</h3>
-        <p class="input-value">${book.author}</p>
-        <button class="delete-btn" id=${index}>Remove</button>
-      </div>
-    `)
-    .join('')}
-  `;
-    localStorage.setItem('books', JSON.stringify(bookArray));
+    if((title.value === '') || (author.value === '')) {
+      alert('Please put a title and author');
+    } else {
+      bookArray.push({ title: title.value, author: author.value });
+      displayContentContainer.innerHTML = `
+      ${bookArray
+      .map((book, index) => `
+        <div class="user-input">
+          <h3 class="input-value">${book.title}</h3>
+          <p class="input-value">${book.author}</p>
+          <button class="delete-btn" id=${index}>Remove</button>
+        </div>
+      `)
+      .join('')}
+    `;
+      localStorage.setItem('books', JSON.stringify(bookArray));
+    }
   });
 
   displayContentContainer.addEventListener('click', (event) => {
