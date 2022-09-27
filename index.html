@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Store</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Store</title>
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
-    <!-- Main Section -->
-    <main>
-        <div class="container">
-            <!-- form -->
-            <form action="js/index.js" class="form" id="form">
-                <h1>Book Store</h1>
-                <div class="form-control">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" placeholder="Enter Title">
-                </div>
-                <div class="form-control">
-                    <label for="author">Author</label>
-                    <input type="text" id="author" placeholder="Enter Author">
-                </div>
-                <button type="submit" class="btn">Add</button>
-            </form>
 
+<body>
+  <!-- Main Section -->
+  <main>
+    <div class="container">
+      <h1>Book Store</h1>
+
+      <div class="show-added-books">
+
+      </div>
+      <!-- form -->
+      <form class="form" id="form">
+
+        <div class="form-control">
+          <label for="title"></label>
+          <input type="text" id="title" placeholder="Enter Title" required>
         </div>
-    </main>
-    <script type="module" src="/js/index.js"></script>
+        <div class="form-control">
+          <label for="author"></label>
+          <input type="text" id="author" placeholder="Enter Author" required>
+        </div>
+        <input type="submit" value="Add" class="btn" id="submit-form"></button>
+      </form>
+
+    </div>
+  </main>
+  <script type="module" src="/js/index.js"></script>
+
 </body>
+
 </html>
