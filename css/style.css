@@ -1,11 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-input {
+  display: flex;
+  gap: 10px;
+}
+
 .show-added-books {
   width: 80%;
-  padding-bottom: 5px;
+  border: 2px solid black;
 }
 
 .show-added-books > .user-input {
   padding: 1rem;
-  border-bottom: 2px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.show-added-books:nth-child(even) {
+  background-color: #dcd7d7;
+}
+
+.user-input:nth-child(odd) {
+  background-color: #fff;
 }
 
 .input-value {
@@ -16,5 +37,67 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: flex-start;
+  align-items: center;
+  margin-top: 60px;
+}
+
+#title {
+  border: 2px solid black;
+}
+
+#author {
+  border: 2px solid black;
+}
+
+.input-div {
+  display: flex;
+  gap: 10px;
+  width: 90%;
+}
+
+.detele-btn-div {
+  justify-self: flex-end;
+}
+
+.delete-btn {
+  outline: none;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+}
+
+#submit-form {
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+  outline: none;
+}
+
+.submit-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+form > hr {
+  height: 2px;
+  width: 50%;
+  background-color: #333;
+  border: none;
+}
+
+.error-message-div {
+  background-color: rgba(255, 0, 0, 0.642);
+  display: none;
+  width: 30vh;
+  margin-top: 10px;
+  border-radius: 20px;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-delay: 1s;
+}
+
+.error-message {
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 100;
+  font-size: 15px;
 }
