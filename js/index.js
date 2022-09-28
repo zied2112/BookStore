@@ -1,5 +1,5 @@
 const submit = document.querySelector('#submit-form');
-const displayContentContainer = document.querySelector(".display__books");
+const displayContentContainer = document.querySelector('.display__books');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const errorMessage = document.querySelector('.error-message-div');
@@ -26,8 +26,8 @@ class AwesomeBook {
     displayContentContainer.innerHTML = `
     <h1>Book Store</h1>
     ${this.bookArray
-      .map(
-        (book, index) => `
+    .map(
+      (book, index) => `
         <div class="show-added-books">
         <div class="user-input">
         <div class="input-div">
@@ -39,9 +39,9 @@ class AwesomeBook {
         </div>
         </div>
         </div>
-      `
-      )
-      .join("")}
+      `,
+    )
+    .join('')}
       `;
   }
 
@@ -78,27 +78,23 @@ displayContentContainer.addEventListener('click', (event) => {
 });
 
 const listBtn = document.querySelector('.btn-list');
-const addBtn = document.querySelector(".btn-add");
-const contactBtn = document.querySelector(".btn-contact");
-const contactInfo = document.querySelector(".contact-info");
-const form = document.querySelector(".form"); 
+const addBtn = document.querySelector('.btn-add');
+const contactBtn = document.querySelector('.btn-contact');
+const contactInfo = document.querySelector('.contact-info');
+const form = document.querySelector('.form');
 
-listBtn.addEventListener("click", () => {
-  displayContentContainer.style.display = "block";
-  form.style.display = "none";
-  contactInfo.style.display = "none";
-}
- );
-addBtn.addEventListener("click", () => {
-  displayContentContainer.style.display = "none";
-  form.style.display = "flex";
-  contactInfo.style.display = "none";
-
- });
-contactBtn.addEventListener("click", () => { 
-  displayContentContainer.style.display = "none";
-  form.style.display = "none";
-  contactInfo.style.display = "flex";
-
- });
-
+listBtn.addEventListener('click', () => {
+  displayContentContainer.style.display = 'block';
+  form.style.display = 'none';
+  contactInfo.style.display = 'none';
+});
+addBtn.addEventListener('click', () => {
+  displayContentContainer.style.display = 'none';
+  form.style.display = 'flex';
+  contactInfo.style.display = 'none';
+});
+contactBtn.addEventListener('click', () => {
+  displayContentContainer.style.display = 'none';
+  form.style.display = 'none';
+  contactInfo.style.display = 'flex';
+});
