@@ -2,21 +2,18 @@ const submit = document.querySelector('#submit-form');
 const displayContentContainer = document.querySelector('.show-added-books');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
+const errorMessage = document.querySelector('.error-message-div');
 
-function AwesomeBook(title, author) {
-  this.title = title;
-  this.author = author;
-}
-
-class NewAwesomeBook {
-  constructor() {
+class AwesomeBook {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
     this.bookArray = JSON.parse(localStorage.getItem('books')) || [];
   }
 
   displayBook() {
     displayContentContainer.innerHTML = `
-    ${this.bookArray
-    .map((book, index) => `
+    ${this.bookArray.map((book, index) => `
       <div class="user-input">
         <div class="input-div">
         <h3 class="input-value">"${book.title}"</h3>
@@ -33,8 +30,9 @@ class NewAwesomeBook {
 
   addAwesomeBook() {
     if ((title.value === '') || (author.value === '')) {
-      alert('Please put a title and author');
+      errorMessage.style.display = 'block';
     } else {
+      errorMessage.style.display = 'none';
       const newBook = new AwesomeBook(title.value, author.value);
       this.bookArray.push(newBook);
       localStorage.setItem('books', JSON.stringify(this.bookArray));
@@ -51,7 +49,7 @@ class NewAwesomeBook {
   }
 }
 
-const bookInput = new NewAwesomeBook();
+const bookInput = new AwesomeBook();
 
 submit.addEventListener('click', (event) => {
   event.preventDefault();
