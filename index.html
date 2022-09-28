@@ -5,20 +5,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
   <title>Book Store</title>
   <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body>
+<body class="body">
   <!-- Main Section -->
-  <main>
-    <div class="container">
-      <h1>Book Store</h1>
-
-      <div class="show-added-books">
-
+  <header >
+    <nav class="header">
+      <div class="logo">
+        Awesome Books
       </div>
+      <div>
+        <ul class="navbar-list">
+          <li>
+            <button class="navbar-btns btn-list">List</button>
+          </li>
+          <li>
+            <button class="navbar-btns btn-add" id="add-new-btn">Add New</button>
+          </li>
+          <li>
+            <button class="navbar-btns btn-contact">Contact</button>
+          </li>
+        </ul>   
+      </div>
+    </nav>
+    <div class="time-and-date">
+
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <div class="display__books">
+      
+      </div>
+      
       <!-- form -->
       <form class="form" id="form">
         <hr/>
@@ -32,15 +57,38 @@
           <input type="text" id="author" placeholder="Enter Author" required>
         </div>
         <div class="submit-div">
-          <input type="submit" value="Add" class="btn" id="submit-form"></button>
+          <button type="submit" value="Add" class="sumbit-btn btn" id="submit-form">Add</button>
         </div>
       </form>
       <div class="error-message-div">
         <p class="error-message">Please type in the title and author of the book.</p>
       </div>
 
+    
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <p>Do you have any questions or you just want to say "Hello"?
+        <br>
+        You can reach out to us!
+      </p>
+      <ul>
+        <li>
+          <h5>Our e-mail: mail@mail.com</h5>
+        </li>
+        <li>
+          <h5>Our phone number: 030305959</h5>
+        </li>
+        <li>
+          <h5>Our address: Streetname 22,3243,City,County</h5>
+        </li>
+      </ul>
+
+    </div>
     </div>
   </main>
+  <footer class="footer">
+    Copyright  ...
+  </footer>
   <script type="module" src="js/index.js"></script>
 
 </body>
