@@ -1,3 +1,5 @@
+import Book from './book.js';
+
 const submit = document.querySelector('#submit-form');
 const displayContentContainer = document.querySelector('.show-added-books');
 const title = document.querySelector('#title');
@@ -9,23 +11,24 @@ class AwesomeBook {
     this.title = title;
     this.author = author;
     this.bookArray = JSON.parse(localStorage.getItem('books')) || [];
+    this.displayBook();
   }
 
   displayBook() {
     displayContentContainer.innerHTML = `
     ${this.bookArray.map((book, index) => `
       <div class="user-input">
-        <div class="input-div">
-        <h3 class="input-value">"${book.title}"</h3>
-        <h3 class="input-value"> by ${book.author}</h3>
-        </div>
-        <div class="detele-btn-div">
-        <button class="delete-btn" id=${index}>Remove</button>
-        </div>
+      <div class="input-div">
+      <h3 class="input-value">"${book.title}"</h3>
+      <h3 class="input-value"> by ${book.author}</h3>
       </div>
-    `)
+      <div class="detele-btn-div">
+      <button class="delete-btn" id=${index}>Remove</button>
+      </div>
+      </div>
+      `)
     .join('')}
-  `;
+      `;
   }
 
   addAwesomeBook() {
