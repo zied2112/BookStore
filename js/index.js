@@ -1,16 +1,16 @@
+import Book from './book.js';
+
 const submit = document.querySelector('#submit-form');
 const displayContentContainer = document.querySelector('.show-added-books');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 
-function AwesomeBook(title, author) {
-  this.title = title;
-  this.author = author;
-}
-
 class NewAwesomeBook {
+  Book = new Book('title.value', 'author.value');
+
   constructor() {
     this.bookArray = JSON.parse(localStorage.getItem('books')) || [];
+    this.displayBook();
   }
 
   displayBook() {
@@ -18,24 +18,25 @@ class NewAwesomeBook {
     ${this.bookArray
     .map((book, index) => `
       <div class="user-input">
-        <div class="input-div">
-        <h3 class="input-value">"${book.title}"</h3>
-        <h3 class="input-value"> by ${book.author}</h3>
-        </div>
-        <div class="detele-btn-div">
-        <button class="delete-btn" id=${index}>Remove</button>
-        </div>
+      <div class="input-div">
+      <h3 class="input-value">"${book.title}"</h3>
+      <h3 class="input-value"> by ${book.author}</h3>
       </div>
-    `)
+      <div class="detele-btn-div">
+      <button class="delete-btn" id=${index}>Remove</button>
+      </div>
+      </div>
+      `)
     .join('')}
-  `;
+      `;
   }
 
   addAwesomeBook() {
     if ((title.value === '') || (author.value === '')) {
       alert('Please put a title and author');
     } else {
-      const newBook = new AwesomeBook(title.value, author.value);
+      const newBook = new Book(title.value, author.value);
+      console.log(newBook);
       this.bookArray.push(newBook);
       localStorage.setItem('books', JSON.stringify(this.bookArray));
       this.displayBook();
