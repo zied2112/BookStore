@@ -5,12 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
   <title>Book Store</title>
   <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body>
+<body class="body">
   <!-- Main Section -->
   <header >
     <nav class="header">
@@ -18,19 +21,18 @@
         Awesome Books
       </div>
       <div>
-        
+        <ul class="navbar-list">
+          <li>
+            <button class="navbar-btns">List</button>
+          </li>
+          <li>
+            <button class="navbar-btns">Add New</button>
+          </li>
+          <li>
+            <button class="navbar-btns">Contact</button>
+          </li>
+        </ul>   
       </div>
-      <ul>
-        <li>
-          <button>List</button>
-        </li>
-        <li>
-          <button>Add New</button>
-        </li>
-        <li>
-          <button>Contact</button>
-        </li>
-      </ul>
     </nav>
     <div class="time-and-date">
 
@@ -67,6 +69,7 @@
     <div class="contact-info">
       <h3>Contact Information</h3>
       <p>Do you have any questions or you just want to say "Hello"?
+        <br>
         You can reach out to us!
       </p>
       <ul>
@@ -83,7 +86,7 @@
 
     </div>
   </main>
-  <footer>
+  <footer class="footer">
     Copyright  ...
   </footer>
   <script type="module" src="js/index.js"></script>

@@ -1,32 +1,38 @@
+*{
+  font-family: 'Patrick Hand', cursive;
+}
+
 .header {
   width: 100%;
   border: 2px solid #000;
-  padding: 10px 20px;
   display: flex;
-  /* justify-content: space-between; */
-  height: 10%;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
 }
 
 .main {
-  height: 80%;
+  height: 84vh;
 }
 
 .logo {
   display: inline-block;
+  padding-left: 15px;
 }
 
 .container {
-  display: flex;
+  display: none;
   flex-direction: column;
   flex: 1;
   justify-content: center;
   align-items: center;
-  visibility: hidden;
 }
 
 .contact-info {
   display: grid;
   justify-content: center;
+  font-size: 32px;
+  padding-top: 8%;
 }
 
 .user-input {
@@ -123,4 +129,28 @@ form > hr {
   color: #fff;
   font-weight: 100;
   font-size: 15px;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.navbar-btns {
+  background-color: #fff;
+  border: none;
+}
+
+.time-and-date {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.footer {
+  height: 3vh;
+  border: 2px solid black;
+  padding: 10px;
 }
