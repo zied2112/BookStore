@@ -1,5 +1,3 @@
-import Book from './book.js';
-
 const submit = document.querySelector('#submit-form');
 const displayContentContainer = document.querySelector('.show-added-books');
 const title = document.querySelector('#title');
