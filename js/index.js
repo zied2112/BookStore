@@ -3,6 +3,16 @@ const displayContentContainer = document.querySelector('.show-added-books');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const errorMessage = document.querySelector('.error-message-div');
+const timeAndDate = document.querySelector('.time-and-date');
+
+const dateAndTime = () => {
+  setInterval(() => {
+    const date = new Date().toUTCString();
+    timeAndDate.innerHTML = date;
+  }, 0);
+};
+
+dateAndTime();
 
 class AwesomeBook {
   constructor(title, author) {
